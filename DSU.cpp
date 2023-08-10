@@ -72,6 +72,8 @@ struct DSU{
         if(Gsize[leader_u] < Gsize[leader_v]) swap(leader_u, leader_v);
         parent[leader_v] = leader_u;
         Gsize[leader_u] += Gsize[leader_v];
+        edges[leader_u] += edges[leader_v];
+        min[leader_u] = std::min(min[leader_u] , min[leader_v]);
     }
 
     ll get_size(ll u){
