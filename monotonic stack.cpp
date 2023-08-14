@@ -1,3 +1,5 @@
+template < typename T = int > vector < T > nextGreaterelement(vector < T >& nums) {
+    int n = nums.size();
     vector < T > res(n, -1);
     stack < int > st;
     for(int i = n - 1; i >= 0; i--){
